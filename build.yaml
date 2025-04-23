@@ -1,0 +1,12 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['builds', 'submit', '--tag=gcr.io/whitelist-test-291918/my-app']
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/whitelist-test-291918/my-app', '.']
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/whitelist-test-291918/my-app']
+
+images:
+- 'gcr.io/whitelist-test-291918/my-app'
