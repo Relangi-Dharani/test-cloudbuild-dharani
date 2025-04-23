@@ -21,3 +21,5 @@ int longestMountain(int *arr, int n)
     if(m>=3) return m;
     return 0;
 }
+
+// here the code is to find the highest mountain and it is very interesting code in coding ninjas
